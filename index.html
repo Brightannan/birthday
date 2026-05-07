@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Mary! 🎉</title>
+<title>Happy Birthday Mum! 🎉</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -94,6 +94,16 @@
     margin-top: 0.5rem;
     opacity: 0;
     animation: fadeUp 0.9s 0.7s forwards;
+  }
+
+  .hero-from {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    color: var(--gold);
+    margin-top: 0.75rem;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.85s forwards;
+    letter-spacing: 0.05em;
   }
  
   .hero-emoji {
@@ -282,6 +292,53 @@
     color: rgba(255,255,255,0.35);
     font-size: 0.85rem;
     margin-top: 0.75rem;
+  }
+
+  /* LETTER SECTION */
+  .letter-section {
+    padding: 4rem 2rem;
+    max-width: 680px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .letter-card {
+    background: rgba(245, 200, 66, 0.06);
+    border: 1px solid rgba(245, 200, 66, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem 2.5rem;
+    text-align: left;
+    position: relative;
+  }
+
+  .letter-card::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    color: rgba(245, 200, 66, 0.15);
+    position: absolute;
+    top: -1.5rem;
+    left: 1.5rem;
+    line-height: 1;
+  }
+
+  .letter-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: rgba(255,255,255,0.85);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .letter-sign {
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-align: right;
   }
  
   /* ANIMATIONS */
@@ -538,7 +595,7 @@
   <button id="music-toggle" onclick="toggleMusic()" title="Play/Pause music">▶</button>
   <div class="music-info">
     <span class="music-label">🎵 Now Playing</span>
-    <span class="music-title">Happy Birthday, Bevin!</span>
+    <span class="music-title">Happy Birthday, Mum!</span>
   </div>
   <div class="music-bars">
     <div class="bar" style="height:6px" id="b1"></div>
@@ -556,7 +613,7 @@
     <div class="cel-headline">Your wish is sent!</div>
     <p class="cel-sub">The universe just received a very special request ✨</p>
     <div class="cel-message" id="cel-message-text">
-      "You just blew out the candles on another incredible year, Mary. May every single thing you wished for come true — and then some. The best is absolutely yet to come."
+      "Mum, you deserve every beautiful thing this world has to offer. Thank you for being my greatest gift."
     </div>
     <span class="cel-emojis">🌟 🎂 🥂 🎊 💖</span>
     <button class="cel-dismiss" onclick="closeCelebration()">💫 Thank you!</button>
@@ -565,16 +622,33 @@
  
 <!-- HERO -->
 <section class="page">
-  <div class="hero-badge">✦ A Very Special Day ✦</div>
-  <h1 class="hero-name" onclick="launchConfetti()">Mary Bevin</h1>
-  <p class="hero-sub">Today is all about you</p>
-  <span class="hero-emoji">🎂 🎉 🌟</span>
+  <div class="hero-badge">✦ Celebrating Someone Extra Special ✦</div>
+  <h1 class="hero-name" onclick="launchConfetti()">Dorothy Samba</h1>
+  <p class="hero-sub">My incredible Mum 💛</p>
+  <p class="hero-from">With all my love, from your daughter</p>
+  <span class="hero-emoji">🌸 🎂 💖</span>
   <div class="scroll-hint">↓ scroll ↓</div>
 </section>
  
+<!-- LETTER TO MUM -->
+<section class="letter-section">
+  <h2 class="section-title">A Note from Your Daughter</h2>
+  <p class="section-sub">Words that come straight from the heart</p>
+  <div class="letter-card">
+    <p class="letter-text">
+      Dear Mum,<br><br>
+      On your special day, I just want you to know how deeply loved and appreciated you are. You have given me more than you will ever fully know — your strength, your warmth, your wisdom, and your endless, selfless love have shaped everything good in me.<br><br>
+      You showed me what it means to be strong even when things are hard. You held me when I cried, cheered the loudest when I succeeded, and never once let me forget that I am worthy. That is the greatest gift a mother can give her child — and you gave it freely, every single day.<br><br>
+      Today is your day, Mum. You deserve flowers, laughter, rest, and so much joy. I hope this birthday reminds you of just how treasured you are — not only to me, but to everyone whose life you have touched.<br><br>
+      Thank you for being you. I love you more than words can say.
+    </p>
+    <div class="letter-sign">— With all my heart, Your Daughter 💛</div>
+  </div>
+</section>
+
 <!-- CAKE -->
 <section class="cake-section">
-  <h2 class="section-title">Make a Wish</h2>
+  <h2 class="section-title">Make a Wish, Mum</h2>
   <p class="section-sub">Blow out the candles and watch the magic happen</p>
  
   <div class="cake-wrapper">
@@ -587,13 +661,11 @@
       <rect x="30" y="190" width="200" height="55" rx="8" fill="#C0392B"/>
       <rect x="30" y="190" width="200" height="12" rx="4" fill="#E74C3C"/>
       <ellipse cx="130" cy="190" rx="100" ry="13" fill="#E74C3C"/>
-      <!-- stripes -->
       <rect x="55" y="193" width="8" height="50" rx="2" fill="rgba(255,255,255,0.12)"/>
       <rect x="85" y="193" width="8" height="50" rx="2" fill="rgba(255,255,255,0.12)"/>
       <rect x="115" y="193" width="8" height="50" rx="2" fill="rgba(255,255,255,0.12)"/>
       <rect x="145" y="193" width="8" height="50" rx="2" fill="rgba(255,255,255,0.12)"/>
       <rect x="175" y="193" width="8" height="50" rx="2" fill="rgba(255,255,255,0.12)"/>
-      <!-- dots -->
       <circle cx="70" cy="215" r="5" fill="#F5C842"/>
       <circle cx="100" cy="220" r="5" fill="#7EC8E3"/>
       <circle cx="130" cy="213" r="5" fill="#FF9AA2"/>
@@ -663,56 +735,56 @@
  
 <!-- WISHES GRID -->
 <section class="wishes-section">
-  <h2 class="section-title">Birthday Wishes for You</h2>
-  <p class="section-sub">Everything we hope this year brings</p>
+  <h2 class="section-title">Birthday Wishes for You, Mum</h2>
+  <p class="section-sub">Everything your daughter hopes this year brings you</p>
   <div class="wishes-grid">
     <div class="wish-card">
+      <span class="wish-icon">🌸</span>
+      <div class="wish-title">Rest & Renewal</div>
+      <div class="wish-text">You have spent so many years pouring into others. May this year finally bring you the rest, peace, and quiet joy you truly deserve.</div>
+    </div>
+    <div class="wish-card">
+      <span class="wish-icon">💛</span>
+      <div class="wish-title">Overflowing Love</div>
+      <div class="wish-text">May you feel as deeply loved as you have made me feel my entire life — because that love is real, and it comes back to you a hundredfold.</div>
+    </div>
+    <div class="wish-card">
       <span class="wish-icon">✨</span>
-      <div class="wish-title">Endless Joy</div>
-      <div class="wish-text">May every day bring you moments that make your heart feel full and your smile unstoppable.</div>
+      <div class="wish-title">Good Health</div>
+      <div class="wish-text">May your body be strong, your spirit be light, and your health be a blessing that carries you through many more beautiful years ahead.</div>
     </div>
     <div class="wish-card">
-      <span class="wish-icon">🌺</span>
-      <div class="wish-title">Blooming Dreams</div>
-      <div class="wish-text">May every dream you've been quietly nurturing finally burst into the most beautiful bloom.</div>
-    </div>
-    <div class="wish-card">
-      <span class="wish-icon">💫</span>
-      <div class="wish-title">Good Vibes Only</div>
-      <div class="wish-text">May this year be your most vibrant chapter yet — full of laughs, good food, and great energy.</div>
-    </div>
-    <div class="wish-card">
-      <span class="wish-icon">🏆</span>
-      <div class="wish-title">Big Wins</div>
-      <div class="wish-text">May every goal you set your mind to happen faster than you imagined — you deserve every win.</div>
+      <span class="wish-icon">🏡</span>
+      <div class="wish-title">Sweet Moments</div>
+      <div class="wish-text">May this year be filled with sweet, simple moments — warm meals, laughter with loved ones, and quiet mornings that feel like a gift.</div>
     </div>
     <div class="wish-card">
       <span class="wish-icon">🌊</span>
-      <div class="wish-title">Pure Peace</div>
-      <div class="wish-text">May you find deep peace this year — in your mind, your heart, and in everything around you.</div>
+      <div class="wish-title">Pure Peace of Mind</div>
+      <div class="wish-text">May every worry fade, every burden lift, and may you find a deep, settled peace that wraps around you like a warm embrace.</div>
     </div>
     <div class="wish-card">
-      <span class="wish-icon">💖</span>
-      <div class="wish-title">Overflowing Love</div>
-      <div class="wish-text">May you be surrounded by people who love you deeply and remind you just how special you are.</div>
+      <span class="wish-icon">🌟</span>
+      <div class="wish-title">Your Own Dreams</div>
+      <div class="wish-text">You have always cheered for my dreams. May this be the year your own dreams are celebrated and come beautifully true.</div>
     </div>
   </div>
 </section>
  
 <!-- COMPLIMENT MACHINE -->
 <section class="compliment-section">
-  <h2 class="section-title" style="margin-bottom:0.5rem">Birthday Compliment Machine</h2>
-  <p class="section-sub" style="margin-bottom:1.5rem">Press for a special message just for you</p>
+  <h2 class="section-title" style="margin-bottom:0.5rem">A Reminder from Your Daughter</h2>
+  <p class="section-sub" style="margin-bottom:1.5rem">Press for a special truth just for you, Mum</p>
   <div class="compliment-box">
-    <div id="compliment-text">"Press the button and receive your birthday truth."</div>
-    <button class="compliment-btn" onclick="newCompliment()">💝 Give Me a Compliment</button>
+    <div id="compliment-text">"Press the button and receive a birthday truth from your daughter's heart."</div>
+    <button class="compliment-btn" onclick="newCompliment()">💝 Read a Message</button>
   </div>
 </section>
  
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-msg">Happy Birthday, Mary! 🥂</div>
-  <p class="footer-sub">Wishing you all the best today and always</p>
+  <div class="footer-msg">Happy Birthday, Mum Dorothy! 🥂</div>
+  <p class="footer-sub">From your daughter, with endless love and gratitude 💛</p>
 </footer>
  
 <script>
@@ -778,9 +850,9 @@
   /* ─── Candles ─── */
   let blown = false;
   const wishes = [
-    '"Your wish is on its way to the universe... ✨"',
+    '"Your wish is on its way to the universe, Mum... ✨"',
     '"Something wonderful is being arranged just for you 🌟"',
-    '"The stars heard you, Mary. Get ready! 💫"',
+    '"The stars heard you, Dorothy. Get ready! 💫"',
     '"May your wish bloom into reality this very year 🌸"',
     '"The universe said yes. Watch what happens next 🎯"',
   ];
@@ -803,18 +875,17 @@
       wr.textContent = wishes[Math.floor(Math.random() * wishes.length)];
       wr.classList.add('visible');
       launchConfetti(200);
-      // Show celebration modal after a beat
       setTimeout(() => showCelebration(), 700);
     }, 900);
   }
  
   /* ─── Celebration Modal ─── */
   const celMessages = [
-    "You just blew out the candles on another incredible year, Bevin. May every single thing you wished for come true — and then some. The best is absolutely yet to come. 🌟",
-    "One breath and the whole universe heard you, Mary! This year is going to be your most magical one yet. Every dream, every goal, every hope — it's all on its way to you. 🚀",
-    "Candles out, wish sent, magic activated! 🎇 Mary, you deserve a year so beautiful it makes you cry happy tears. Get ready — something wonderful is coming.",
-    "The stars have your wish written down, Mary. Signed, sealed, and on its way. This birthday marks the beginning of your most extraordinary chapter yet. 💫",
-    "Wish received! 🎆 You've been someone who lights up rooms all year — tonight the whole sky lights up just for YOU, Mary. Happy birthday, superstar!",
+    "Mum, you have been my safe place, my biggest fan, and my greatest teacher. Today the whole universe celebrates you — and so does your daughter, with her whole heart. 🌸",
+    "You blew out the candles and sent your wish to the stars, Mum. Every good thing you have ever given — may it all come back to you a thousandfold. You deserve it all. 💛",
+    "Dorothy, you are the reason your daughter knows what love looks like. Today is for you. No cooking, no worrying — just being celebrated, the way you have always celebrated everyone else. 🎊",
+    "Mum, I hope your birthday feels as warm and beautiful as you have made every moment of my life. Thank you for everything. I love you more than any words can hold. 🌟",
+    "The wish is sent! 🎆 And this daughter's prayer goes with it — that this year brings you rest, joy, laughter, and every blessing you have quietly hoped for, Mum. You are so deeply loved.",
   ];
  
   function showCelebration() {
@@ -822,10 +893,8 @@
     const msgEl = document.getElementById('cel-message-text');
     const card = document.getElementById('cel-card');
  
-    // Pick random message
     msgEl.textContent = '"' + celMessages[Math.floor(Math.random() * celMessages.length)] + '"';
  
-    // Add sparkle dots
     card.querySelectorAll('.sparkle').forEach(s => s.remove());
     const sparklePositions = [
       {top:'-12px',left:'20%'},{top:'-8px',right:'25%'},{top:'20%',right:'-12px'},
@@ -853,16 +922,16 @@
  
   /* ─── Compliments ─── */
   const compliments = [
-    '"Mary, you radiate the kind of warmth that makes every room better just by you being in it."',
-    '"Your smile could honestly cure a bad day. It is that powerful."',
-    '"You are the kind of person songs get written about. Never change."',
-    '"If kindness had a face, it would look exactly like yours."',
-    '"Mary, you are genuinely one of the good ones — rare, precious, and irreplaceable."',
-    '"The energy you bring into people\'s lives is a gift they will carry forever."',
-    '"You make being yourself look like the most beautiful thing in the world."',
-    '"Happy birthday to someone who deserves every single good thing coming their way."',
-    '"You are proof that some people are just made to shine."',
-    '"The world is genuinely a better place because you are in it, Mary."',
+    '"Mum, you are the kind of woman people write about in books — strong, gentle, and quietly extraordinary."',
+    '"You have never once made me feel alone. That is the most powerful thing a mother can do."',
+    '"Dorothy, your love has been the foundation everything good in my life is built on."',
+    '"You taught me how to be kind, how to be brave, and how to keep going. That is your legacy."',
+    '"Mum, the world is genuinely a better place because you are in it — and my world is the best it could be because of you."',
+    '"You sacrificed so much without ever making me feel like a burden. I see that now, and I am so grateful."',
+    '"There is no one I would rather have as my mother. No one. You are one in a billion, Dorothy."',
+    '"Happy Birthday to the woman who showed me what unconditional love truly looks like."',
+    '"Mum, you are proof that the most important thing a person can be is kind — and you are the kindest."',
+    '"Everything I am, I owe in no small part to you. Thank you, Mum. Thank you for everything."',
   ];
   let lastIdx = -1;
  
@@ -885,7 +954,6 @@
   const NOTE = { C4:261.63, D4:293.66, E4:329.63, F4:349.23, G4:392.00, A4:440.00, B4:493.88,
                  C5:523.25, D5:587.33, E5:659.25, F5:698.46, G5:783.99, A5:880.00 };
  
-  /* Happy Birthday melody: [note, duration_beats] — 4/4 at ~88bpm */
   const MELODY = [
     [NOTE.C4,0.75],[NOTE.C4,0.25],[NOTE.D4,1],[NOTE.C4,1],[NOTE.F4,1],[NOTE.E4,2],
     [NOTE.C4,0.75],[NOTE.C4,0.25],[NOTE.D4,1],[NOTE.C4,1],[NOTE.G4,1],[NOTE.F4,2],
@@ -893,7 +961,6 @@
     [NOTE.A4,0.75],[NOTE.A4,0.25],[NOTE.G4,1],[NOTE.F4,1],[NOTE.G4,1],[NOTE.F4,2]
   ];
  
-  /* Harmony (thirds below melody) */
   const HARMONY = [
     [NOTE.A4*0.75,0.75],[NOTE.A4*0.75,0.25],[NOTE.B4*0.75,1],[NOTE.A4*0.75,1],[NOTE.D4,1],[NOTE.C4,2],
     [NOTE.A4*0.75,0.75],[NOTE.A4*0.75,0.25],[NOTE.B4*0.75,1],[NOTE.A4*0.75,1],[NOTE.E4,1],[NOTE.D4,2],
@@ -913,15 +980,12 @@
     const osc = audioCtx.createOscillator();
     const gain = audioCtx.createGain();
     const end = startTime + duration;
- 
     osc.type = type;
     osc.frequency.setValueAtTime(freq, startTime);
- 
     gain.gain.setValueAtTime(0, startTime);
     gain.gain.linearRampToValueAtTime(gainVal, startTime + 0.02);
     gain.gain.setValueAtTime(gainVal, end - 0.06);
     gain.gain.linearRampToValueAtTime(0, end);
- 
     osc.connect(gain);
     gain.connect(audioCtx.destination);
     osc.start(startTime);
@@ -931,19 +995,15 @@
   }
  
   function playBellNote(freq, startTime, duration) {
-    /* Bright bell: sine + triangle mix */
     const osc1 = audioCtx.createOscillator();
     const osc2 = audioCtx.createOscillator();
     const gain = audioCtx.createGain();
- 
     osc1.type = 'triangle'; osc1.frequency.value = freq;
     osc2.type = 'sine'; osc2.frequency.value = freq * 2;
- 
     const end = startTime + duration;
     gain.gain.setValueAtTime(0, startTime);
     gain.gain.linearRampToValueAtTime(0.18, startTime + 0.015);
     gain.gain.exponentialRampToValueAtTime(0.001, end);
- 
     osc1.connect(gain); osc2.connect(gain);
     gain.connect(audioCtx.destination);
     osc1.start(startTime); osc2.start(startTime);
@@ -955,19 +1015,15 @@
     if (!isPlaying) return;
     let t = startTime;
     const totalBeats = MELODY.reduce((s,[,b]) => s + b, 0);
- 
     MELODY.forEach(([freq, beats], i) => {
       const dur = beats * BEAT;
       playBellNote(freq, t, dur * 0.9);
-      /* Harmony */
       if (HARMONY[i]) {
         const [hFreq, hBeats] = HARMONY[i];
         playNote(hFreq, t, hBeats * BEAT * 0.85, 0.05, 'sine');
       }
       t += dur;
     });
- 
-    /* Bass drum pulse every 2 beats */
     for (let b = 0; b < totalBeats; b += 2) {
       const bt = startTime + b * BEAT;
       const kick = audioCtx.createOscillator();
@@ -981,7 +1037,6 @@
       kick.start(bt); kick.stop(bt + 0.25);
       scheduledNodes.push(kick, kg);
     }
- 
     const totalDuration = totalBeats * BEAT * 1000;
     loopTimeout = setTimeout(() => scheduleLoop(audioCtx.currentTime + 0.05), totalDuration - 200);
   }
